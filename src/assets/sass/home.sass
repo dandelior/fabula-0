@@ -1,0 +1,180 @@
+@import variables
+
+.home
+    position: relative
+    padding: 
+        top: 100vh
+    .items
+        .item
+            display: block
+            text-decoration: none
+            margin-bottom: 78px
+            .img-wrapper
+                width: 100vw
+                height: 100vw
+                // padding-top: 100 / 100 * 100%
+                background-color: rgba($black, 0.9)
+                margin-bottom: 42px
+                .img
+                    width: 100%
+                    height: 100%
+                    background-position: center
+                    background-size: cover
+                    background-repeat: no-repeat
+                    display: flex
+                    justify-content: center
+                    align-items: center
+            .data
+                text-align: center
+                box-sizing: border-box
+                margin: auto
+                width: 90%
+                color: $black
+                h3
+                    font-size: 21px
+                    @include font-bold
+                    margin-bottom: 10px
+                p
+                    // opacity: 0.6
+                    opacity: 0.2
+                    @include font-regular
+                    font-size: 16px
+
+@media (min-width: 768px)
+    .home
+        // padding: 
+            // top: 60vw
+        .items
+            .item
+                display: flex
+                background-color: white
+                margin-bottom: 88px
+                margin-bottom: 128px
+                margin-bottom: 0
+                .img-wrapper
+                    width: 50vw
+                    height: 100vh
+                    padding: 3vw
+                    box-sizing: border-box
+                    margin-bottom: 0
+                    background-color: rgba($black, 0.05)
+                    // padding-top: 50 / 100 * 100%
+                    display: flex
+                    align-items: center
+                    .img
+                        height: 0
+                        padding-top: 1 / 1 * 100%
+                .data
+                    width: 50vw
+                    height: 100vh
+                    box-sizing: border-box
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    flex-direction: column
+                    // background-color: white
+                    color: white
+                    background-color: rgba($black, 0.9)
+                    // transition: all ease 0.3s
+                    h3
+                    p
+                    // &:hover
+                        // color: rgba($black, 0.9)
+                        // background-color: rgba($black, 0.95)
+                &:nth-child(2n+2)
+                    .img-wrapper
+                        order: 2
+                    .data
+                        order: 1
+
+@media (min-width: 900px)
+    .home
+        padding: 
+            // top: 390px
+            top: 440px
+            top: 480px
+            top: 100vh
+        .items
+            .item
+                // display: flex
+                // margin-bottom: 178px
+                margin-bottom: 0
+                .img-wrapper
+                    // box-sizing: border-box
+                    // padding: 4.4vw
+                    padding: 5vw
+                    height: 105vh
+                    // display: flex
+                    // align-items: center
+                    .img
+                        // height: 0
+                        // padding-top: 1 / 1 * 100%
+                .data
+                    // width: 50%
+                    height: 105vh
+                    h3
+                    p
+                &:nth-child(2n+2)
+                    .img-wrapper
+                        // order: 2
+                    .data
+                        // order: 1
+
+@media (min-width: 1200px)
+    .home
+        padding: 
+            // top: 390px
+            top: 460px
+            top: 570px
+            top: 100vh
+        .items
+            .item
+                // margin-bottom: 88px
+                // display: flex
+                .img-wrapper
+                    // width: 50%
+                    // padding-top: 50 / 100 * 100%
+                .data
+                    // width: 50%
+                    h3
+                    p
+                &:nth-child(2n+2)
+                    .img-wrapper
+                        // order: 2
+                    .data
+                        // order: 1
+
+.nexts
+    display: flex
+    justify-content: center
+    .loadMoreButton
+        outline: none
+        text-align: center
+        border: none
+        background-color: rgba($black, 0.1)
+        @include font-bold 
+        cursor: pointer
+        width: 100%
+        height: 300px
+        font-size: 15px
+        &:hover
+            background-color: $black
+            color: white
+        &.disabled
+            pointer-events: none
+            
+@media (min-width: 768px)
+    .nexts
+        // margin-top: -20px
+        .loadMoreButton
+            
+@media (min-width: 900px)
+    .nexts
+        // margin-top: -40px
+        .loadMoreButton
+            font-size: 16px
+            
+@media (min-width: 1200px)
+    .nexts
+        .loadMoreButton
+            font-size: 15px
